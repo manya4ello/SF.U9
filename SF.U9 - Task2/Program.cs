@@ -56,8 +56,9 @@ namespace unit9
     }
     class NumberReader
     {
-        public delegate void NumberReaderDelegate(int number, List<string> names);
-        public event NumberReaderDelegate NumberReaderEvent;
+        //public delegate void NumberReaderDelegate(int number, List<string> names);
+       // public event NumberReaderDelegate NumberReaderEvent;
+        public event Action<int,List<string>> NumberReaderEvent;
 
         public void Read(List<string> names)
         {
